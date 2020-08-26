@@ -7,19 +7,27 @@
 //
 
 import UIKit
+import Apollo
 
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
-
-    func configureView() {
-        // Update the user interface for the detail item.
-        if let detail = detailItem {
-            if let label = detailDescriptionLabel {
-                label.text = detail.description
-            }
+    var launchID: GraphQLID? {
+        didSet {
+            configureView()
         }
+    }
+    
+    func configureView() {
+      // Update the user interface for the detail item.
+      guard
+        let label = self.detailDescriptionLabel,
+        let id = self.launchID else {
+          return
+      }
+
+      label.text = "Launch \(id)"
     }
 
     override func viewDidLoad() {
@@ -28,13 +36,7 @@ class DetailViewController: UIViewController {
         configureView()
     }
 
-    var detailItem: NSDate? {
-        didSet {
-            // Update the view.
-            configureView()
-        }
-    }
-
+    
 
 }
 
