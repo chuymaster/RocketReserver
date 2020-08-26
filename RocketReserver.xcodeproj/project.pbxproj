@@ -21,6 +21,8 @@
 		3206554A24F640E400FDAE67 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3206554924F640E400FDAE67 /* API.swift */; };
 		3206554C24F6416100FDAE67 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3206554B24F6416100FDAE67 /* Network.swift */; };
 		3206554F24F6467A00FDAE67 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3206554E24F6467A00FDAE67 /* SDWebImage */; };
+		3206555324F65AE800FDAE67 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3206555224F65AE800FDAE67 /* KeychainSwift */; };
+		3206555724F65BD700FDAE67 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3206555624F65BD700FDAE67 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		3206554924F640E400FDAE67 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		3206554B24F6416100FDAE67 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		3206555024F6517D00FDAE67 /* LaunchDetails.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = LaunchDetails.graphql; sourceTree = "<group>"; };
+		3206555424F65BBD00FDAE67 /* Login.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Login.graphql; sourceTree = "<group>"; };
+		3206555624F65BD700FDAE67 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 			files = (
 				3206554F24F6467A00FDAE67 /* SDWebImage in Frameworks */,
 				3206554124F63BFA00FDAE67 /* Apollo in Frameworks */,
+				3206555324F65AE800FDAE67 /* KeychainSwift in Frameworks */,
 				3206554324F63BFA00FDAE67 /* ApolloWebSocket in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,11 +127,13 @@
 				3206550F24F63B4A00FDAE67 /* SceneDelegate.swift */,
 				3206551124F63B4A00FDAE67 /* MasterViewController.swift */,
 				3206551324F63B4A00FDAE67 /* DetailViewController.swift */,
+				3206555624F65BD700FDAE67 /* LoginViewController.swift */,
 				3206551524F63B4A00FDAE67 /* Main.storyboard */,
 				3206551824F63B4A00FDAE67 /* Assets.xcassets */,
 				3206551A24F63B4A00FDAE67 /* LaunchScreen.storyboard */,
 				3206551D24F63B4A00FDAE67 /* Info.plist */,
 				3206554B24F6416100FDAE67 /* Network.swift */,
+				3206555424F65BBD00FDAE67 /* Login.graphql */,
 			);
 			path = RocketReserver;
 			sourceTree = "<group>";
@@ -170,6 +177,7 @@
 				3206554024F63BFA00FDAE67 /* Apollo */,
 				3206554224F63BFA00FDAE67 /* ApolloWebSocket */,
 				3206554E24F6467A00FDAE67 /* SDWebImage */,
+				3206555224F65AE800FDAE67 /* KeychainSwift */,
 			);
 			productName = RocketReserver;
 			productReference = 3206550A24F63B4A00FDAE67 /* RocketReserver.app */;
@@ -246,6 +254,7 @@
 			packageReferences = (
 				3206553F24F63BFA00FDAE67 /* XCRemoteSwiftPackageReference "apollo-ios" */,
 				3206554D24F6467A00FDAE67 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				3206555124F65AE800FDAE67 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 			);
 			productRefGroup = 3206550B24F63B4A00FDAE67 /* Products */;
 			projectDirPath = "";
@@ -311,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3206555724F65BD700FDAE67 /* LoginViewController.swift in Sources */,
 				3206550E24F63B4A00FDAE67 /* AppDelegate.swift in Sources */,
 				3206551024F63B4A00FDAE67 /* SceneDelegate.swift in Sources */,
 				3206554C24F6416100FDAE67 /* Network.swift in Sources */,
@@ -657,6 +667,14 @@
 				minimumVersion = 5.8.4;
 			};
 		};
+		3206555124F65AE800FDAE67 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 19.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -674,6 +692,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3206554D24F6467A00FDAE67 /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
+		};
+		3206555224F65AE800FDAE67 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3206555124F65AE800FDAE67 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

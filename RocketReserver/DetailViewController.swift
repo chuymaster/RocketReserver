@@ -8,6 +8,7 @@
 
 import UIKit
 import Apollo
+import KeychainSwift
 
 class DetailViewController: UIViewController {
     private var missionPatchImageView: UIImageView = UIImageView()
@@ -64,6 +65,8 @@ class DetailViewController: UIViewController {
         
         outerStack.addArrangedSubview(innerStack)
         
+        bookCancelButton.target = self
+        bookCancelButton.action = #selector(bookOrCancelTapped)
         navigationController?.navigationItem.rightBarButtonItem = bookCancelButton
         
         // Label customize
@@ -112,7 +115,7 @@ class DetailViewController: UIViewController {
             self.bookCancelButton.title = "Cancel trip"
             self.bookCancelButton.tintColor = .red
         } else {
-            self.bookCancelButton.title = "Book now!"
+            self.bookCancelButton.title = "Book Now!"
             self.bookCancelButton.tintColor = self.view.tintColor
         }
     }
@@ -136,5 +139,28 @@ class DetailViewController: UIViewController {
         }
     }
     
+    private func isLoggedIn() -> Bool {
+      let keychain = KeychainSwift()
+      return keychain.get(LoginViewController.loginKeychainKey) != nil
+    }
+    
+    @objc private func bookOrCancelTapped() {
+      guard self.isLoggedIn() else {
+        present(LoginViewController.instantiate(), animated: true, completion: nil)
+        return
+      }
+        
+      guard let launch = self.launch else {
+        // We don't have enough information yet to know
+        // if we're booking or cancelling, bail.
+        return
+      }
+        
+      if launch.isBooked {
+        print("Cancel trip!")
+      } else {
+        print("Book trip!")
+      }
+    }
 }
 
