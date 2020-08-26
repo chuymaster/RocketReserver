@@ -13,7 +13,11 @@ import KeychainSwift
 class Network {
   static let shared = Network()
     
-  private(set) lazy var apollo = ApolloClient(url: URL(string: "https://apollo-fullstack-tutorial.herokuapp.com")!)
+    private(set) lazy var apollo: ApolloClient = {
+     let httpNetworkTransport = HTTPNetworkTransport(url: URL(string: "https://apollo-fullstack-tutorial.herokuapp.com/")!)
+     httpNetworkTransport.delegate = self
+     return ApolloClient(networkTransport: httpNetworkTransport)
+    }()
 }
 
 extension Network: HTTPNetworkTransportPreflightDelegate {

@@ -23,6 +23,7 @@
 		3206554F24F6467A00FDAE67 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 3206554E24F6467A00FDAE67 /* SDWebImage */; };
 		3206555324F65AE800FDAE67 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3206555224F65AE800FDAE67 /* KeychainSwift */; };
 		3206555724F65BD700FDAE67 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3206555624F65BD700FDAE67 /* LoginViewController.swift */; };
+		3206555924F6610F00FDAE67 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3206555824F6610F00FDAE67 /* UIViewController+Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,9 @@
 		3206555024F6517D00FDAE67 /* LaunchDetails.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = LaunchDetails.graphql; sourceTree = "<group>"; };
 		3206555424F65BBD00FDAE67 /* Login.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = Login.graphql; sourceTree = "<group>"; };
 		3206555624F65BD700FDAE67 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3206555824F6610F00FDAE67 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		3206555B24F6621D00FDAE67 /* BookTrip.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = BookTrip.graphql; sourceTree = "<group>"; };
+		3206555C24F6628600FDAE67 /* CancelTrip.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = CancelTrip.graphql; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				3206554924F640E400FDAE67 /* API.swift */,
+				3206555B24F6621D00FDAE67 /* BookTrip.graphql */,
 				3206554824F640A700FDAE67 /* LaunchList.graphql */,
 				3206555024F6517D00FDAE67 /* LaunchDetails.graphql */,
 				3206554724F63CEA00FDAE67 /* schema.json */,
@@ -134,6 +139,8 @@
 				3206551D24F63B4A00FDAE67 /* Info.plist */,
 				3206554B24F6416100FDAE67 /* Network.swift */,
 				3206555424F65BBD00FDAE67 /* Login.graphql */,
+				3206555824F6610F00FDAE67 /* UIViewController+Alert.swift */,
+				3206555C24F6628600FDAE67 /* CancelTrip.graphql */,
 			);
 			path = RocketReserver;
 			sourceTree = "<group>";
@@ -327,6 +334,7 @@
 				3206551224F63B4A00FDAE67 /* MasterViewController.swift in Sources */,
 				3206551424F63B4A00FDAE67 /* DetailViewController.swift in Sources */,
 				3206554A24F640E400FDAE67 /* API.swift in Sources */,
+				3206555924F6610F00FDAE67 /* UIViewController+Alert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
