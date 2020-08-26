@@ -60,6 +60,7 @@
 		3206554824F640A700FDAE67 /* LaunchList.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = LaunchList.graphql; sourceTree = "<group>"; };
 		3206554924F640E400FDAE67 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		3206554B24F6416100FDAE67 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		3206555024F6517D00FDAE67 /* LaunchDetails.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = LaunchDetails.graphql; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +116,7 @@
 			children = (
 				3206554924F640E400FDAE67 /* API.swift */,
 				3206554824F640A700FDAE67 /* LaunchList.graphql */,
+				3206555024F6517D00FDAE67 /* LaunchDetails.graphql */,
 				3206554724F63CEA00FDAE67 /* schema.json */,
 				3206550D24F63B4A00FDAE67 /* AppDelegate.swift */,
 				3206550F24F63B4A00FDAE67 /* SceneDelegate.swift */,
